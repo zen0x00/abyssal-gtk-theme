@@ -1,48 +1,61 @@
-$blue_1: #99c1f1;
-$blue_2: #62a0ea;
-$blue_3: #3584e4;
-$blue_4: #1c71d8;
-$blue_5: #1a5fb4;
-$green_1: #8ff0a4;
-$green_2: #57e389;
-$green_3: #33d17a;
-$green_4: #2ec27e;
-$green_5: #26a269;
-$yellow_1: #f9f06b;
-$yellow_2: #f8e45c;
-$yellow_3: #f6d32d;
-$yellow_4: #f5c211;
-$yellow_5: #e5a50a;
-$orange_1: #ffbe6f;
-$orange_2: #ffa348;
-$orange_3: #ff7800;
-$orange_4: #e66100;
-$orange_5: #c64600;
-$red_1: #f66151;
-$red_2: #ed333b;
-$red_3: #e01b24;
-$red_4: #c01c28;
-$red_5: #a51d2d;
-$purple_1: #dc8add;
-$purple_2: #c061cb;
-$purple_3: #9141ac;
-$purple_4: #813d9c;
-$purple_5: #613583;
-$brown_1: #cdab8f;
-$brown_2: #b5835a;
-$brown_3: #986a44;
-$brown_4: #865e3c;
-$brown_5: #63452c;
-$light_1: #ffffff;
-$light_2: #f6f5f4;
-$light_3: #deddda;
-$light_4: #c0bfbc;
-$light_5: #9a9996;
-$dark_1: #77767b;
-$dark_2: #5e5c64;
-$dark_3: #3d3846;
-$dark_4: #241f31;
-$dark_5: #000000;
+// Abyssal Color Palette for Libadwaita
+// A clean, minimal dark theme with blue accents
+
+$blue_1: #5A9DFF;
+$blue_2: #448FFF;
+$blue_3: #448FFF;
+$blue_4: #2F78E6;
+$blue_5: #1E5CC8;
+
+$green_1: #8BD5CA;
+$green_2: #8BD5CA;
+$green_3: #8BD5CA;
+$green_4: #6BC4B6;
+$green_5: #5BADA4;
+
+$yellow_1: #FFE680;
+$yellow_2: #FFD16D;
+$yellow_3: #FFD16D;
+$yellow_4: #E6B84D;
+$yellow_5: #CC9D2B;
+
+$orange_1: #FFD16D;
+$orange_2: #FFD16D;
+$orange_3: #F5A962;
+$orange_4: #E69450;
+$orange_5: #D68342;
+
+$red_1: #F5A5B5;
+$red_2: #F38BA8;
+$red_3: #F38BA8;
+$red_4: #E6768A;
+$red_5: #D96278;
+
+$purple_1: #C4B8E8;
+$purple_2: #B8B1FF;
+$purple_3: #B8B1FF;
+$purple_4: #A59FFF;
+$purple_5: #9293FF;
+
+$brown_1: #B0A4A0;
+$brown_2: #9D918D;
+$brown_3: #8A7E7A;
+$brown_4: #776C68;
+$brown_5: #645A56;
+
+// Abyssal Greys/Dark tones
+$light_1: #D4D9EB;   // primary text
+$light_2: #8F929E;   // secondary text
+$light_3: #7F849C;   // tertiary text
+$light_4: #6E7380;   // muted text
+$light_5: #5A6070;   // disabled text
+
+// Dark backgrounds
+$dark_1: #3A3F47;    // dimmed
+$dark_2: #2D3139;    // elevated
+$dark_3: #1C272B;    // elevated border
+$dark_4: #0C171B;    // elevated background
+$dark_5: #061115;    // main background
 
 // Sass thinks we're using the colors in the variables as strings and may shoot
 // warning, it's innocuous and can be defeated by using #{$var}.

@@ -24,23 +24,15 @@ fi
 
 SASSC_OPT="-M -t expanded"
 
-_COLOR_VARIANTS=('' '-Light' '-Dark')
-if [ ! -z "${COLOR_VARIANTS:-}" ]; then
-  IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
-fi
-
+# Dark-only theme - only compile base files without color variants
 cp -rf src/sass/_tweaks.scss src/sass/_tweaks-temp.scss
-cp -rf src/sass/gnome-shell/_common.scss src/sass/gnome-shell/_common-temp.scss
 
-for color in "${_COLOR_VARIANTS[@]}"; do
-  sassc $SASSC_OPT src/main/gtk-3.0/gtk${color}.{scss,css}
-  echo "==> Generating the 3.0 gtk${color}.css..."
-  sassc $SASSC_OPT src/main/gtk-4.0/gtk${color}.{scss,css}
-  echo "==> Generating the 4.0 gtk${color}.css..."
-  sassc $SASSC_OPT src/main/libadwaita/libadwaita${color}.{scss,css}
-  echo "==> Generating the libadwaita libadwaita${color}.css..."
-  sassc $SASSC_OPT src/main/gnome-shell/gnome-shell${color}.{scss,css}
-  echo "==> Generating the gnome-shell${color}.css..."
-  sassc $SASSC_OPT src/main/cinnamon/cinnamon${color}.{scss,css}
-  echo "==> Generating the cinnamon${color}.css..."
-done
+# Compile Abyssal Dark theme files
+echo "==> Generating the 3.0 gtk.css..."
+sassc $SASSC_OPT src/main/gtk-3.0/gtk.{scss,css}
+
+echo "==> Generating the 4.0 gtk.css..."
+sassc $SASSC_OPT src/main/gtk-4.0/gtk.{scss,css}
+
+echo "==> Generating the libadwaita libadwaita.css..."
+sassc $SASSC_OPT src/main/libadwaita/libadwaita.{scss,css}

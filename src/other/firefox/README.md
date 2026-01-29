@@ -1,5 +1,5 @@
 
-## Colloid Firefox theme
+## Abyssal Firefox theme
 
 <p align="center">A flat clean theme for Firefox 90+</p>
 

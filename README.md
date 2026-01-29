@@ -1,99 +1,104 @@
-## Colloid gtk theme
+# Abyssal GTK Theme
 
-![Colloid](colloid.png?raw=true)
+A sophisticated, minimalist dark GTK theme built with the Abyssal color palette. Designed for modern Linux desktops with support for GTK 2, GTK 3, GTK 4, and Libadwaita.
+
+## Features
+
+- **Abyssal Color Palette**: Deep blues (#448FFF), soft pinks (#F38BA8), teal accents (#8BD5CA), and warm yellows (#FFD16D)
+- **Dark-Only Design**: Optimized single dark theme for consistency and performance
+- **Full GTK Support**: GTK 2.0, GTK 3, GTK 4, and Libadwaita compatible
+- **Clean Modern Aesthetic**: Minimal, elegant design focused on usability
 
 ## Requirements
 
 - GTK `>=3.20`
-- `gnome-themes-extra` (or `gnome-themes-standard`)
-- Murrine engine — The package name depends on the distro.
+- `sassc` — build dependency (required for compiling SCSS)
+- Murrine engine for GTK 2 support:
   - `gtk-engine-murrine` on Arch Linux
   - `gtk-murrine-engine` on Fedora
   - `gtk2-engine-murrine` on openSUSE
   - `gtk2-engines-murrine` on Debian, Ubuntu, etc.
-- `sassc` — build dependency
-
-- `Icon theme` [Colloid](https://github.com/vinceliuice/Colloid-icon-theme)
-
-## Donate
-
-If you like my project, you can buy me a coffee:
-
-<span class="paypal"><a href="https://www.paypal.me/vinceliuice" title="Donate to this project using Paypal"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal donate button" /></a></span>
 
 ## Installation
 
-### Manual Installation
+### Quick Start
 
-Run the following commands in the terminal:
+Simply run the install script:
 
-```sh
+```bash
 ./install.sh
 ```
 
-> Tip: `./install.sh` allows the following options:
+The theme will be installed to `~/.local/share/themes/Abyssal`
 
-```
--d, --dest DIR          Specify destination directory (Default: ~/.themes)
--n, --name NAME         Specify theme name (Default: Colloid)
--t, --theme VARIANT...  Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
--c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)
--s, --size VARIANT...   Specify size variant [standard|compact] (Default: standard variant)
+### Installation Options
 
--l, --libadwaita        Install specify gtk-4.0 theme into config folder ($HOME/.config/gtk-4.0) for all gtk4 apps use this theme
-                        Default ColorSchemes theme will follow the system style (light/dark mode switch), all ColorSchemes versions not support this !
-                        Options for default ColorSchemes:
-                        1. system                      Default option (using system colors for light/dark mode switching)
-                        2. fixed                       Using fixed theme colors (that will break light/dark mode switch)
+```bash
+./install.sh [OPTIONS]
 
---tweaks                Specify versions for tweaks
-                        1. [nord|dracula|gruvbox|everforest|catppuccin|all]  (Nord/Dracula/Gruvbox/Everforet/Catppuccin/all) ColorSchemes version
-                        2. black                       Blackness color version
-                        3. rimless                     Remove the 1px border about windows and menus
-                        4. normal                      Normal windows button style like gnome default theme (titlebuttons: max/min/close)
-                        5. float                       Floating gnome-shell panel style
-
--r, --remove,
--u, --uninstall         Uninstall/Remove installed themes or links
-
--h, --help              Show help
+Options:
+  -d, --dest DIR    Specify destination directory (Default: ~/.local/share/themes)
+  -n, --name NAME   Specify theme name (Default: Abyssal)
+  -h, --help        Show this help message
 ```
 
-> For more information, run: `./install.sh --help`
+## Building from Source
 
-### Fix for Libadwaita
+To rebuild the CSS from SCSS:
 
-```sh
-./install.sh -l
+```bash
+./build.sh
 ```
 
-Default ColorSchemes themes will follow the system style now ! (switch [light/dark] mode)
+Requires `sassc` to be installed.
 
-https://github.com/vinceliuice/Colloid-gtk-theme/assets/7604295/d5c24086-08bc-45a4-b4d9-124c02249216
+## Color Palette
 
-### Fix for Flatpak
+Abyssal uses a carefully selected color scheme:
 
-```sh
-sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
+- **Primary Blue**: `#448FFF` - Main accent color
+- **Pink**: `#F38BA8` - Secondary accent
+- **Teal**: `#8BD5CA` - Tertiary accent  
+- **Yellow**: `#FFD16D` - Warning/highlight
+- **Dark Background**: `#061115` - Deep dark base
+
+## Firefox Theme
+
+A matching Firefox theme is included. Install it from: [src/other/firefox](src/other/firefox)
+
+## Development
+
+### Building
+
+All required files are pre-compiled. To rebuild:
+
+```bash
+./build.sh         # Build CSS from SCSS
+./install.sh       # Install the theme
 ```
 
-If you use flatpak apps, you can run this to fix theme issue
+### Project Structure
 
-### ColorSchemes
+```
+abyssal-gtk/
+├── src/
+│   ├── main/           # Compiled theme directories
+│   │   ├── gtk-2.0/   # GTK 2 theme
+│   │   ├── gtk-3.0/   # GTK 3 theme
+│   │   ├── gtk-4.0/   # GTK 4 theme
+│   │   └── libadwaita/ # Libadwaita (GNOME 42+)
+│   ├── sass/          # SCSS source files
+│   ├── assets/        # GTK assets
+│   └── other/         # Additional themes (Firefox, etc.)
+├── build.sh           # SCSS to CSS compiler
+├── install.sh         # Theme installer
+└── README.md          # This file
+```
 
-![colorschemes](colorschemes.png?raw=true)
+## License
 
-### Tweaks
+GPL-3.0 or later
 
-![tweaks](tweaks.png?raw=true)
+## Credits
 
-### Flatpak Installation (gtk-3.0)
-
-Automatically install your host GTK+ theme as a Flatpak. Use this:
-
-- [pakitheme](https://github.com/refi64/pakitheme)
-
-## Firefox theme
-[Install Firefox theme](src/other/firefox)
-
-![01](src/other/firefox/screenshot.png?raw=true)
+Created as a customized dark theme focused on the Abyssal color palette for modern Linux desktop environments.

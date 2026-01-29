@@ -1,8 +1,8 @@
 
-// Theme ColorScheme palette: default/nord/dracula
-@import 'color-palette-default';
+// Theme ColorScheme palette: Abyssal Dark (hardcoded)
+@import 'color-palette-abyssal';
 
-$colorscheme: 'default';
+$colorscheme: 'abyssal';
 
 // Color type
 $colortype: 'system'; // system/fixed : use system colors / use theme colors

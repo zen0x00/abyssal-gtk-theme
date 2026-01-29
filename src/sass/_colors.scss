@@ -1,5 +1,4 @@
-// When color definition differs for dark and light variant,
-// it gets @if ed depending on $variant
+// Abyssal Dark theme - Simplified for dark variant only
 
 @import 'tweaks-temp';
 
@@ -58,27 +57,16 @@
 }
 
 @function theme($color) {
-  @if ($variant == 'light') {
-    @if ($theme == 'default') { @return $default-dark; }
-    @if ($theme == 'purple') { @return $purple-dark; }
-    @if ($theme == 'pink') { @return $pink-dark; }
-    @if ($theme == 'red') { @return $red-dark; }
-    @if ($theme == 'orange') { @return $orange-dark; }
-    @if ($theme == 'yellow') { @return $yellow-dark; }
-    @if ($theme == 'green') { @return $green-dark; }
-    @if ($theme == 'teal') { @return $teal-dark; }
-    @if ($theme == 'grey') { @return $grey-600; }
-  } @else {
-    @if ($theme == 'default') { @return $default-light; }
-    @if ($theme == 'purple') { @return $purple-light; }
-    @if ($theme == 'pink') { @return $pink-light; }
-    @if ($theme == 'red') { @return $red-light; }
-    @if ($theme == 'orange') { @return $orange-light; }
-    @if ($theme == 'yellow') { @return $yellow-light; }
-    @if ($theme == 'green') { @return $green-light; }
-    @if ($theme == 'teal') { @return $teal-light; }
-    @if ($theme == 'grey') { @return $grey-200; }
-  }
+  // Dark variant only - use light theme colors for dark backgrounds
+  @if ($theme == 'default') { @return $default-light; }
+  @if ($theme == 'purple') { @return $purple-light; }
+  @if ($theme == 'pink') { @return $pink-light; }
+  @if ($theme == 'red') { @return $red-light; }
+  @if ($theme == 'orange') { @return $orange-light; }
+  @if ($theme == 'yellow') { @return $yellow-light; }
+  @if ($theme == 'green') { @return $green-light; }
+  @if ($theme == 'teal') { @return $teal-light; }
+  @if ($theme == 'grey') { @return $grey-200; }
 }
 
 @function background($type) {
@@ -110,60 +98,60 @@
 }
 
 //
-// Basic colors
+// Basic colors (Abyssal dark theme)
 //
 
 $primary:                               theme(color);
-$drop_target_color:                     $orange-dark;
+$drop_target_color:                     #F38BA8;
 $indicator:                             theme(color);
-$titlebar-indicator:                    if($variant == 'dark', currentColor, $primary);
+$titlebar-indicator:                    currentColor;
 $inverse-indicator:                     if($theme == 'grey', $white, $primary);
-$applet-primary:                        if($theme == 'grey' and variant == 'light' and $topbar == 'dark', $grey-200, $primary);
+$applet-primary:                        $primary;
 
-$background:                            if($variant == 'light', background(a), background(g));
-$surface:                               if($variant == 'light', background(a), background(h));
-$base:                                  if($variant == 'light', background(a), background(g));
-$base-alt:                              if($variant == 'light', background(b), background(f));
+$background:                            background(g);
+$surface:                               background(h);
+$base:                                  background(g);
+$base-alt:                              background(f);
 
-$tooltip:                               if($variant == 'dark', rgba(darken(background(e), 3%), 0.9), rgba(darken(background(h), 3%), 0.9));
+$tooltip:                               rgba(darken(background(e), 3%), 0.9);
 $osd:                                   background(e);
 $scrim:                                 background(f);
 $scrim-alt:                             background(g);
 $scrim-inverse:                         rgba($white, 0.1);
-$titlebar:                              if($topbar == 'dark', background(f), background(c));
-$titlebar-backdrop:                     if($topbar == 'dark', background(g), background(b));
-$titlebar-primary:                      if($topbar == 'dark' and $theme == 'grey' and $variant == 'light', lighten($primary, 15%), $primary);
-$sidebar:                               if($topbar == 'dark' and $variant == 'light', $titlebar, $base-alt);
-$sidebar-backdrop:                      if($topbar == 'dark' and $variant == 'light', $titlebar-backdrop, $background);
-$popover:                               if($variant == 'light', background(a), background(g));
-$panel-solid:                           if($topbar == 'dark', background(e), background(c)); // for Unity panel which doesn't allow translucent colors
+$titlebar:                              background(f);
+$titlebar-backdrop:                     background(g);
+$titlebar-primary:                      $primary;
+$sidebar:                               $base-alt;
+$sidebar-backdrop:                      $background;
+$popover:                               background(g);
+$panel-solid:                           background(e);
 $panel:                                 rgba($panel-solid, $panel_opacity);
 
-$button:                                if($variant == 'dark', on($background, secondary-fill), on($background, fill));
-$entry:                                 if($variant == 'dark', on($background, secondary-fill), on($background, fill));
+$button:                                on($background, secondary-fill);
+$entry:                                 on($background, secondary-fill);
 
 //
-// Misc colors
+// Misc colors (Abyssal scheme)
 //
 
-$link:                                  $links;
-$link-visited:                          if($variant == 'light', $purple-dark, $purple-light);
+$link:                                  #448FFF;
+$link-visited:                          #B8B1FF;
 
-$warning:                               if($variant == 'light', $yellow-dark, $yellow-light);
-$error:                                 if($variant == 'light', $red-dark, $red-light);
-$success:                               if($variant == 'light', $green-dark, $green-light);
+$warning:                               #FFD16D;
+$error:                                 #F38BA8;
+$success:                               #8BD5CA;
 
 $suggested:                             $primary;
 $destructive:                           $error;
 
 $assets-color:                          $primary;
 
-$frame:                                 if($variant == 'light', rgba($black, 0.12), rgba($black, 0.25));
-$border:                                if($variant == 'light', rgba($black, 0.12), rgba($white, 0.12));
-$shade:                                 if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
-$window-border:                         if($variant == 'light', rgba($black, 0.12), rgba($black, 0.75));
-$solid-border:                          if($variant == 'light', mix(black, $base, 12%), mix(white, $base, 12%));
-$border-alt:                            rgba($black, 0.16); // darker border color for Chrome and Firefox
+$frame:                                 rgba($black, 0.25);
+$border:                                #1C272B;
+$shade:                                 rgba($white, 0.08);
+$window-border:                         rgba($black, 0.75);
+$solid-border:                          mix(white, $base, 12%);
+$border-alt:                            rgba($black, 0.16);
 
 //
 // Overlay state colors
@@ -208,13 +196,12 @@ $panel-track-disabled:                  on($panel, track-disabled);
 $panel-divider:                         on($panel, divider);
 $panel-fill:                            on($panel, fill);
 
-
 // Titlebutton colors
 
 $titlebutton-close:                      $button-close;
 $titlebutton-max:                        $button-max;
 $titlebutton-min:                        $button-min;
 
-// workaround for GTK3 @placeholder_text_color which doesn't allow translucent colors
+// Placeholder text color (dark variant only)
 
-$placeholder_text_color:                if($variant == 'light', mix($black, $base, percentage(0.6)), mix($white, $base, percentage(0.7)));
+$placeholder_text_color:                mix($white, $base, percentage(0.7));
