@@ -1,5 +1,5 @@
 
-@import '../tweaks-temp';
+@import '../tweaks';
 
 // Function to convert px values to em
 @function to_em($input, $base: 16px) {

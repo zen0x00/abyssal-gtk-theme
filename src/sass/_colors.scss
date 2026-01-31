@@ -1,6 +1,6 @@
 // Abyssal Dark theme - Simplified for dark variant only
 
-@import 'tweaks-temp';
+@import 'tweaks';
 
 @function gtkalpha($c, $a) {
   @return unquote("alpha(#{$c}, #{$a})");
