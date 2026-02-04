@@ -42,6 +42,15 @@ Options:
   -h, --help        Show this help message
 ```
 
+### Arch Linux (AUR)
+
+Arch Linux users can install the theme directly from the AUR:
+
+Using `yay`:
+```bash
+yay -S abyssal-gtk-theme
+```
+
 ## Building from Source
 
 To rebuild the CSS from SCSS:
