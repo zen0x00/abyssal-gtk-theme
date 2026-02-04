@@ -34,12 +34,7 @@ The theme will be installed to `~/.local/share/themes/Abyssal`
 ### Installation Options
 
 ```bash
-./install.sh [OPTIONS]
-
-Options:
-  -d, --dest DIR    Specify destination directory (Default: ~/.local/share/themes)
-  -n, --name NAME   Specify theme name (Default: Abyssal)
-  -h, --help        Show this help message
+./install.sh
 ```
 
 ### Arch Linux (AUR)
@@ -70,10 +65,6 @@ Abyssal uses a carefully selected color scheme:
 - **Teal**: `#8BD5CA` - Tertiary accent  
 - **Yellow**: `#FFD16D` - Warning/highlight
 - **Dark Background**: `#061115` - Deep dark base
-
-## Firefox Theme
-
-A matching Firefox theme is included. Install it from: [src/other/firefox](src/other/firefox)
 
 ## Development
 
