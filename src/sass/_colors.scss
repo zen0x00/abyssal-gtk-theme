@@ -1,5 +1,5 @@
 // Abyssal Dark theme - Simplified for dark variant only
-
+@import 'palette';
 @import 'tweaks';
 
 @function gtkalpha($c, $a) {
@@ -134,17 +134,17 @@ $entry:                                 on($background, secondary-fill);
 // Misc colors (Abyssal scheme)
 //
 
-$link:                                  #448FFF;
-$link-visited:                          #B8B1FF;
+$link:            $links;
+$link-visited:    $purple-light;
 
-$warning:                               #FFD16D;
-$error:                                 #F38BA8;
-$success:                               #8BD5CA;
+$warning:         $yellow-light;
+$error:           $red-light;
+$success:         $green-light;
 
-$suggested:                             $primary;
-$destructive:                           $error;
+$suggested:       $primary;
+$destructive:     $error;
 
-$assets-color:                          $primary;
+$assets-color:    $primary;
 
 $frame:                                 rgba($black, 0.25);
 $border:                                #1C272B;
