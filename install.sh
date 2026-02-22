@@ -10,16 +10,16 @@ THEME_NAME="Abyssal"
 SASSC_OPT="-M -t expanded"
 
 PALETTES=(
+  black
+  catppuccin-latte
+  catppuccin
   dark
-  nord
+  dracula
+  e-ink
   everforest
   gruvbox
+  nord
   tokyonight
-  dracula
-  catppuccin-frappe
-  catppuccin-latte
-  catppuccin-macchiato
-  catppuccin-mocha
 )
 
 if [[ "$EUID" -eq 0 ]]; then
