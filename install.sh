@@ -14,6 +14,7 @@ PALETTES=(
   catppuccin-latte
   catppuccin
   dark
+  default
   dracula
   e-ink
   everforest
@@ -56,7 +57,8 @@ EOF
 
 compile_palette() {
   local palette="$1"
-  local theme_fullname="${THEME_NAME}-${palette}"
+  local palette_name="${palette^}"
+  local theme_fullname="${THEME_NAME}-${palette_name}"
   local theme_dir="${DEST_DIR}/${theme_fullname}"
 
   echo "Building ${theme_fullname}..."
