@@ -1,0 +1,74 @@
+$variant:     'dark';
+$topbar:      'dark';
+$colorscheme: 'glass';  // triggers glass-specific overrides in _colors.scss
+
+// ── Semantics ────────────────────────────────────────────────────────────────
+
+$red-light:    #FF6E88;
+$red-dark:     #FF6E88;
+
+$pink-light:   #F38BA8;
+$pink-dark:    #F38BA8;
+
+$purple-light: #C9BAFF;
+$purple-dark:  #C9BAFF;
+
+// Primary accent: electric cyan-blue
+$blue-light:   #5CC8FF;
+$blue-dark:    #5CC8FF;
+
+$teal-light:   #72D9C8;
+$teal-dark:    #72D9C8;
+
+$green-light:  #72D9C8;
+$green-dark:   #72D9C8;
+
+$yellow-light: #FFD16D;
+$yellow-dark:  #FFD16D;
+
+$orange-light: #FFB86C;
+$orange-dark:  #FFB86C;
+
+// ── Text scale (fully opaque — used by on() for contrast math) ───────────────
+
+$grey-050: #EEF0FF;   // primary text
+$grey-100: #D8DCFF;   // primary text alt
+$grey-150: #B8C0E8;   // secondary text
+$grey-200: #8892C0;   // secondary text
+$grey-250: #7880A8;   // tertiary text
+$grey-300: #646B8E;   // muted
+$grey-350: #525870;   // dimmed
+$grey-400: #424858;   // disabled
+
+// ── Surface scale (rgba — compositor blur fills the rest) ────────────────────
+//    RGB components stay dark so on() returns white text.
+//    Alpha controls how much of the wallpaper blurs through.
+
+$grey-450: rgba(28,  36,  72,  0.88);  // popover / dialog
+$grey-500: rgba(22,  30,  62,  0.86);  // elevated card
+$grey-550: rgba(18,  26,  54,  0.84);  // elevated
+$grey-600: rgba(14,  20,  46,  0.82);  // surface raised
+$grey-650: rgba(11,  16,  38,  0.78);  // sidebar
+$grey-700: rgba( 9,  13,  32,  0.74);  // base / view
+$grey-750: rgba( 7,  11,  27,  0.76);  // surface 1
+$grey-800: rgba( 5,   9,  22,  0.72);  // main window bg
+$grey-850: rgba( 3,   7,  18,  0.82);  // deeper panels
+$grey-900: rgba( 2,   5,  14,  0.90);  // deepest
+$grey-950: rgba( 1,   3,  10,  0.95);  // near-opaque base
+
+// ── Roots ────────────────────────────────────────────────────────────────────
+
+$white: #EEF0FF;
+$black: #050916;
+
+// ── Window controls ──────────────────────────────────────────────────────────
+
+$button-close: #FF6E88;
+$button-max:   #5CC8FF;
+$button-min:   #FFD16D;
+
+// ── Links & accents ──────────────────────────────────────────────────────────
+
+$links:         #5CC8FF;
+$default-light: #5CC8FF;
+$default-dark:  #5CC8FF;

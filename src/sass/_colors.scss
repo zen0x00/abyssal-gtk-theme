@@ -173,12 +173,12 @@ $destructive:     $error;
 
 $assets-color:    $primary;
 
-$frame:                                 rgba($black, 0.25);
-$border:                                #1C272B;
-$shade:                                 rgba($white, 0.08);
-$window-border:                         rgba($black, 0.75);
-$solid-border:                          mix(white, $base, 12%);
-$border-alt:                            rgba($black, 0.16);
+$frame:                                 if($colorscheme == 'glass', rgba($white, 0.07),  rgba($black, 0.25));
+$border:                                if($colorscheme == 'glass', rgba($white, 0.11),  #1C272B);
+$shade:                                 if($colorscheme == 'glass', rgba($white, 0.06),  rgba($white, 0.08));
+$window-border:                         if($colorscheme == 'glass', rgba($black, 0.40),  rgba($black, 0.75));
+$solid-border:                          if($colorscheme == 'glass', rgba($white, 0.14),  mix(white, $base, 12%));
+$border-alt:                            if($colorscheme == 'glass', rgba($white, 0.07),  rgba($black, 0.16));
 
 //
 // Overlay state colors

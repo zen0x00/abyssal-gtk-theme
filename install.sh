@@ -18,6 +18,7 @@ PALETTES=(
   dracula
   e-ink
   everforest
+  glass
   gruvbox
   nord
   tokyonight
