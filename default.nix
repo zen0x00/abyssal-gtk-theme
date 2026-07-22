@@ -12,8 +12,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "rxyenv";
     repo = "abyssal-gtk-theme";
-    rev = "e54d6e7";
-    hash = "sha256-Tw3+94cOO3ZT9X5snqCP4iBRXZLThhC0FihofiK1w/k=";
+    rev = "64d2628";
+    hash = "sha256-2zFkqUAovp8/b0f2Z9lnrcY9se35FL0tYPQtc0joOn8=";
   };
 
   nativeBuildInputs = [ sassc ];
