@@ -8,6 +8,7 @@ SASS_DIR="${SRC_DIR}/sass"
 
 THEME_NAME="Abyssal"
 SASSC_OPT="-M -t expanded"
+INSTALL_LIBADWAITA=false
 
 PALETTES=(
   black
@@ -23,6 +24,14 @@ PALETTES=(
   nord
   tokyonight
 )
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -l|--libadwaita) INSTALL_LIBADWAITA=true ;;
+    *) echo "Unknown option: $1"; exit 1 ;;
+  esac
+  shift
+done
 
 if [[ "$EUID" -eq 0 ]]; then
   DEST_DIR="/usr/share/themes"
@@ -86,6 +95,13 @@ compile_palette() {
   sassc $SASSC_OPT \
     "${SRC_DIR}/main/gnome-shell/gnome-shell.scss" \
     "${theme_dir}/gnome-shell/gnome-shell.css"
+
+  # Libadwaita
+  if [[ "$INSTALL_LIBADWAITA" == true ]]; then
+    sassc $SASSC_OPT \
+      "${SRC_DIR}/main/libadwaita/libadwaita.scss" \
+      "${theme_dir}/gtk-4.0/libadwaita.css"
+  fi
 
   # Assets
   cp -r "${SRC_DIR}/assets/gtk/assets" "${theme_dir}/gtk-3.0/" 2>/dev/null || true
