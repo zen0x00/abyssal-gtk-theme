@@ -1,10 +1,20 @@
-{ lib, stdenv, sassc }:
+{
+  lib,
+  stdenv,
+  sassc,
+  fetchFromGitHub,
+}:
 
 stdenv.mkDerivation {
   pname = "abyssal-gtk-theme";
   version = "unstable-2026-07-22";
 
-  src = ./.;
+  src = fetchFromGitHub {
+    owner = "rxyenv";
+    repo = "abyssal-gtk-theme";
+    rev = "e54d6e7";
+    hash = "sha256-Tw3+94cOO3ZT9X5snqCP4iBRXZLThhC0FihofiK1w/k=";
+  };
 
   nativeBuildInputs = [ sassc ];
 
