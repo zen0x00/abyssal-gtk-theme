@@ -27,8 +27,7 @@ stdenv.mkDerivation {
     mkdir -p "$DEST_DIR"
 
     PALETTES=(
-      black catppuccin-latte catppuccin dark default
-      dracula e-ink everforest glass gruvbox nord tokyonight
+      black catppuccin default dracula everforest gruvbox nord tokyonight
     )
 
     SASSC_OPT="-M -t expanded"

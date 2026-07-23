@@ -1,58 +1,75 @@
-$variant: 'dark';
-$topbar: 'dark';
+$variant: "dark";
+$topbar: "dark";
+// Abyssal Theme Color Palette (Dark Only)
+// A clean, minimal dark theme with blue accents
 
-$red-light: #F7768E;
-$red-dark: #F7768E;
+// Reds/Destructive
+$red-light: #f38ba8;
+$red-dark: #f38ba8;
 
-$pink-light: #BB9AF7;
-$pink-dark: #BB9AF7;
+// Pinks
+$pink-light: #f38ba8;
+$pink-dark: #f38ba8;
 
-$purple-light: #BB9AF7;
-$purple-dark: #BB9AF7;
+// Purples
+$purple-light: #b8b1ff;
+$purple-dark: #b8b1ff;
 
-$blue-light: #7AA2F7;
-$blue-dark: #7AA2F7;
+// Blues/Accents (Primary)
+$blue-light: #448fff;
+$blue-dark: #448fff;
 
-$teal-light: #73DACA;
-$teal-dark: #73DACA;
+// Teals/Success
+$teal-light: #8bd5ca;
+$teal-dark: #8bd5ca;
 
-$green-light: #9ECE6A;
-$green-dark: #9ECE6A;
+// Greens/Success
+$green-light: #8bd5ca;
+$green-dark: #8bd5ca;
 
-$yellow-light: #E0AF68;
-$yellow-dark: #E0AF68;
+// Yellows/Warnings
+$yellow-light: #ffd16d;
+$yellow-dark: #ffd16d;
 
-$orange-light: #FF9E9E;
-$orange-dark: #FF9E9E;
+// Oranges
+$orange-light: #ffd16d;
+$orange-dark: #ffd16d;
 
-$grey-050: #E6E9EF;
-$grey-100: #E6E9EF;
-$grey-150: #C8CDD8;
-$grey-200: #AAB1BF;
-$grey-250: #929AAA;
-$grey-300: #7A8394;
-$grey-350: #636C7E;
-$grey-400: #4E5668;
-$grey-450: #3D4762;
-$grey-500: #2A3140;
-$grey-550: #222838;
-$grey-600: #1E2430;
-$grey-650: #1A1F29;
-$grey-700: #161B26;
-$grey-750: #131620;
-$grey-800: #0F1115;
-$grey-850: #0D1013;
-$grey-900: #0A0D11;
-$grey-950: #08090E;
+// Greys (Backgrounds and text)
+$grey-050: #d4d9eb; // light text on dark
+$grey-100: #d4d9eb; // primary text
+$grey-150: #b8c0d8; // secondary text
+$grey-200: #8f929e; // secondary text
+$grey-250: #7f849c; // tertiary text
+$grey-300: #6e7380; // muted text
+$grey-350: #5a6070; // dimmed text
+$grey-400: #484e58; // disabled text
+$grey-450: #3a3f47; // disabled text
+$grey-500: #2d3139; // elevations
+$grey-550: #242f33; // active/elevated backgrounds
+$grey-600: #1c272b; // elevated backgrounds
+$grey-650: #1c272b; // elevated backgrounds
+$grey-700: #0c171b; // backgrounds
+$grey-750: #0c171b; // backgrounds
+$grey-800: #061115; // main background
+$grey-850: #040a0d; // main background
+$grey-900: #000000; // deepest dark
+$grey-950: #000000; // deepest dark
 
-$white: #E6E9EF;
-$black: #0F1115;
+// White (Light text)
+$white: #d4d9eb;
 
-$button-close: #F7768E;
-$button-max: #7AA2F7;
-$button-min: #E0AF68;
+// Black (Dark background)
+$black: #061115;
 
-$links: #7AA2F7;
+// Buttons (Use Abyssal red accent for close, blue for maximize, yellow for minimize)
+$button-close: #f38ba8;
+$button-max: #448fff;
+$button-min: #ffd16d;
 
-$default-light: #7AA2F7;
-$default-dark: #7AA2F7;
+// Links (Use Abyssal blue accent)
+$links: #448fff;
+
+// Theme accents
+$default-light: #448fff;
+$default-dark: #448fff;
