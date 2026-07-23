@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation {
   pname = "abyssal-gtk-theme";
-  version = "unstable-2026-07-22";
+  version = "unstable-2026-07-23";
 
   src = fetchFromGitHub {
     owner = "rxyenv";
     repo = "abyssal-gtk-theme";
-    rev = "64d2628";
-    hash = "sha256-2zFkqUAovp8/b0f2Z9lnrcY9se35FL0tYPQtc0joOn8=";
+    rev = "e76dde6";
+    hash = "sha256-2TtheITjHE/XuUEfGt1B/hi/gHRnrmGwjRTl527DlD4=";
   };
 
   nativeBuildInputs = [ sassc ];
